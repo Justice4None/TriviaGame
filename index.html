@@ -1,0 +1,73 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One&display=swap" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+      crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.3.0/css/mdb.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body class="m-0">
+    
+    <div class="container-fluid mb-0 z-depth-3 justify-content-center">
+
+        <!--Banner-->
+        <header class="row pb-1 border border-dark hoverable">
+            <p class="lead text-primary pt-2 m-auto" id="welcome">
+                Video Game Trivia
+            </p>
+            <p class="lead text-danger" id="message">
+                Let's Play!
+            </p>
+        </header>
+
+        <!--Main-->
+        <main class="row p-1 mt-1">
+            <div class="col">
+            </div>
+            <!--Start-->
+            <button class="btn btn-indian-red btn-block col-10 z-depth-2-half" id="start">Click to Start</button>
+
+            <!--Quiz Theme-->
+            <div class="text-center" id="quiz-theme">
+                <ul>
+                    <li class="btn btn-lg btn-indian-red" id="rpgs" value="rpgs">RPGs</li>
+                    <li class="btn btn-lg btn-indian-red" id="fps" value="fps">FPS Games</li>
+                </ul>
+            </div>
+            <div class="col"></div>
+
+            <!--Game-->
+            <div class="col-12 text-center game">
+                <div class="border border-light square game lead hoverable" id="game">
+
+                    <!--Timer-->
+                    <div class="hoverable p-2 border border-light" id="timer">
+                        Time Remaining:
+                    </div>
+                    <br>
+                    
+                    <!--Think-->
+                    <!-- <div id="think"> -->
+                        Think back to long ago...
+                    <!-- </div> -->
+
+                    <br>
+
+                    <!--Current Question-->
+                    <div class="border border-light" id="current-question">
+                        (Current Question)
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
