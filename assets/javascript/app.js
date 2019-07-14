@@ -102,5 +102,58 @@ const questions = {
             d: "2015"
         },
         correctAnswer: "b"
+    }
+],
+    fps: [{
+        question: "What company started the Call of Duty franchise?",
+        answers: {
+            a: "Treyarch",
+            b: "Infinity Ward",
+            c: "Sledgehammer Games",
+            d: "Dice"
+        },
+        correctAnswer: "b"
     },
-]}
+    {
+        question: "In what year was Battlefield: 2142 released?",
+        answers: {
+            a: "2001",
+            b: "2006",
+            c: "2008",
+            d: "2016"
+        },
+        correctAnswer: "b"
+    },
+    {
+        question: "Who is the main antagonist of Borderlands 2?",
+        answers: {
+            a: "Colonel Zarpedon",
+            b: "Commandant Steele",
+            c: "Interplanetary Ninja Assassin Clap-Trap",
+            d: "Handsome Jack"
+        },
+        correctAnswer: "d"
+    },
+    {
+        question: "What is the endgame content in the Destiny franchise called?",
+        answers: {
+            a: "Quests",
+            b: "Grinding",
+            c: "Raids",
+            d: "Missions"
+        },
+        correctAnswer: "c"
+    },
+    {
+        question: "What was the first Call of Duty: Nazi Zombies map to be released?",
+        answers: {
+            a: "Kino der Toten",
+            b: "Der Reise",
+            c: "Verruckt",
+            d: "Nacht der Untoten"
+        },
+        correctAnswer: "d"
+    },
+    
+
+    ]}
