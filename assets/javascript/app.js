@@ -104,7 +104,7 @@ const questions = {
         correctAnswer: "b"
     }
 ],
-    fps: [{
+    general: [{
         question: "What company started the Call of Duty franchise?",
         answers: {
             a: "Treyarch",
@@ -207,7 +207,7 @@ const questions = {
 
     ],
     general: [{
-        question: "Who is Mario's brother?",
+        question: "Who is general's brother?",
         answers: {
             a: "Luigi",
             b: "Wario",
@@ -247,7 +247,7 @@ const questions = {
         correctAnswer: "b"
     },
     {
-        question: "Who is the original creator of Mario?",
+        question: "Who is the original creator of general?",
         answers: {
             a: "Shigeru Miyamoto",
             b: "Hideo Kojima",
@@ -308,3 +308,259 @@ const questions = {
     },
        
     ]},
+
+//Variables
+const welcomeDiv = $('#welcome');
+const gameDiv = $('#game');
+const quizThemeDiv = $('#quiz-theme');
+const startButton = $('#start');
+const timerDiv = $('#timer');
+const choicesDiv = $('#choices');
+const currentQuestionDiv = $('#current-question');
+var theme;
+var counter;
+var updater;
+var time = 10;
+var correct = 0;
+var incorrect = 0;
+var unanswered = 0;
+const constructedQs = [];
+const constructedAs = [];
+const correctArray = [];
+var currentQuestion;
+var currentQuestionNumber = 1;
+var playerchoice = '';
+var currentCorrectAnswer = '';
+
+//Functions
+resetTimer = () => {
+    time = 30;
+}
+startTimer = () => {
+    updater = setInterval(updateTimer, 1000);
+    counter = setInterval(count, 1000);
+}
+stopTimer = () => {
+    clearInterval(counter);
+    clearInterval(updateTimer);
+}
+count = () => {
+    time--;
+    if (time > 0) {
+        updateTimer();
+    } else {
+        stopTimer();
+        updateTimer();
+    }
+}
+updateTimer = () => {
+    console.log(time);
+    timerDiv.empty().html("Time remaining:<br>" + time);
+}
+
+startGame = () => {
+    // Click the start button to begin game
+    $(startButton).on('click', function () {
+        startButton.hide(500);
+        window.setTimeout(function () {
+            gameDiv.slideDown(100);
+        }, 500);
+        window.setTimeout(function () {
+            quizThemeDiv.slideDown(1500);
+        }, 500)
+    })};
+
+    //Choose a theme for the questions
+    /*RPGs*/
+    $('#rpgs').on('click', function () {
+        build("rpgs");
+        quizThemeDiv.slideUp(1000);
+        window.setTimeout(function () {
+            currentQuestionDiv.show(1500);
+            choicesDiv.show(1500);
+            timerDiv.show(1500)
+        }, 1000);
+        gameDiv.css({
+            backgroundColor: "darkKhaki"
+        });
+        playGame();
+});
+/*general Games*/
+$('#general').on('click', function () {
+    build("general");
+    quizThemeDiv.slideUp(1000);
+    window.setTimeout(function () {
+        currentQuestionDiv.show(1500);
+        choicesDiv.show(1500);
+        timerDiv.show(1500)
+    }, 1000);
+    gameDiv.css({
+        backgroundColor: "darkKhaki"
+    });
+    playGame();
+});
+/*General games*/
+$('#general').on('click', function () {
+    build("general");
+    quizThemeDiv.slideUp(1000);
+    window.setTimeout(function () {
+        currentQuestionDiv.show(1500);
+        choicesDiv.show(1500);
+        timerDiv.show(1500)
+    }, 1000);
+    gameDiv.css({
+        backgroundColor: "darkKhaki"
+    });
+    playGame();
+});
+
+// Reset game scores
+reseteGame = () => {
+    correct = 0
+    incorrect = 0
+    unanswered = 0
+}
+
+// Build an array with the chosen question theme
+build = (theme) => {
+
+    if (theme === "dk") {
+
+        // Build questions array
+
+        question1 = questions.rpgs[0].question;
+        question2 = questions.rpgs[1].question;
+        question3 = questions.rpgs[2].question;
+        question4 = questions.rpgs[3].question;
+        question5 = questions.rpgs[4].question;
+        question6 = questions.rpgs[5].question;
+        question7 = questions.rpgs[6].question;
+        question8 = questions.rpgs[7].question;
+        question9 = questions.rpgs[8].question;
+        question10 = questions.rpgs[9].question;
+
+        constructedQs.push(question1, question2, question3, question4, question5, question6, question7, question8, question9, question10);
+
+        console.log(constructedQs);
+
+        // Build answer choices array
+        answers1 = questions.rpgs[0].answers;
+        answers2 = questions.rpgs[1].answers;
+        answers3 = questions.rpgs[2].answers;
+        answers4 = questions.rpgs[3].answers;
+        answers5 = questions.rpgs[4].answers;
+        answers6 = questions.rpgs[5].answers;
+        answers7 = questions.rpgs[6].answers;
+        answers8 = questions.rpgs[7].answers;
+        answers9 = questions.rpgs[8].answers;
+        answers10 = questions.rpgs[9].answers;
+
+        constructedAs.push(answers1, answers2, answers3, answers4, answers5, answers6, answers7, answers8, answers9, answers10);
+        console.log(constructedAs);
+
+        // Build correct answer array
+        correctAnswer1 = questions.rpgs[0].correctAnswer;
+        correctAnswer2 = questions.rpgs[1].correctAnswer;
+        correctAnswer3 = questions.rpgs[2].correctAnswer;
+        correctAnswer4 = questions.rpgs[3].correctAnswer;
+        correctAnswer5 = questions.rpgs[4].correctAnswer;
+        correctAnswer6 = questions.rpgs[5].correctAnswer;
+        correctAnswer7 = questions.rpgs[6].correctAnswer;
+        correctAnswer8 = questions.rpgs[7].correctAnswer;
+        correctAnswer9 = questions.rpgs[8].correctAnswer;
+        correctAnswer10 = questions.rpgs[9].correctAnswer;
+
+        correctArray.push(correctAnswer1, correctAnswer2, correctAnswer3, correctAnswer4, correctAnswer5, correctAnswer6, correctAnswer7, correctAnswer8, correctAnswer9, correctAnswer10);
+        console.log(correctArray);
+
+    } else if (theme === "general") {
+
+        // Build general theme questions and answers arrays
+        question1 = questions.general[0].question;
+        question2 = questions.general[1].question;
+        question3 = questions.general[2].question;
+        question4 = questions.general[3].question;
+        question5 = questions.general[4].question;
+        question6 = questions.general[5].question;
+        question7 = questions.general[6].question;
+        question8 = questions.general[7].question;
+        question9 = questions.general[8].question;
+        question10 = questions.general[9].question;
+
+        constructedQs.push(question1, question2, question3, question4, question5, question6, question7, question8, question9, question10);
+
+        answers1 = questions.general[0].answers;
+        answers2 = questions.general[1].answers;
+        answers3 = questions.general[2].answers;
+        answers4 = questions.general[3].answers;
+        answers5 = questions.general[4].answers;
+        answers6 = questions.general[5].answers;
+        answers7 = questions.general[6].answers;
+        answers8 = questions.general[7].answers;
+        answers9 = questions.general[8].answers;
+        answers10 = questions.general[9].answers;
+
+        constructedAs.push(answers1, answers2, answers3, answers4, answers5, answers6, answers7, answers8, answers9, answers10);
+        console.log(constructedAs);
+
+        correctAnswer1 = questions.general[0].correctAnswer;
+        correctAnswer2 = questions.general[1].correctAnswer;
+        correctAnswer3 = questions.general[2].correctAnswer;
+        correctAnswer4 = questions.general[3].correctAnswer;
+        correctAnswer5 = questions.general[4].correctAnswer;
+        correctAnswer6 = questions.general[5].correctAnswer;
+        correctAnswer7 = questions.general[6].correctAnswer;
+        correctAnswer8 = questions.general[7].correctAnswer;
+        correctAnswer9 = questions.general[8].correctAnswer;
+        correctAnswer10 = questions.general[9].correctAnswer;
+
+        correctArray.push(correctAnswer1, correctAnswer2, correctAnswer3, correctAnswer4, correctAnswer5, correctAnswer6, correctAnswer7, correctAnswer8, correctAnswer9, correctAnswer10);
+        console.log(correctArray);
+
+    } else if (theme === "general") {
+
+        // Build general theme questions and answers arrays
+        question1 = questions.general[0].question;
+        question2 = questions.general[1].question;
+        question3 = questions.general[2].question;
+        question4 = questions.general[3].question;
+        question5 = questions.general[4].question;
+        question6 = questions.general[5].question;
+        question7 = questions.general[6].question;
+        question8 = questions.general[7].question;
+        question9 = questions.general[8].question;
+        question10 = questions.general[9].question;
+
+        constructedQs.push(question1, question2, question3, question4, question5, question6, question7, question8, question9, question10);
+
+        answers1 = questions.general[0].answers;
+        answers2 = questions.general[1].answers;
+        answers3 = questions.general[2].answers;
+        answers4 = questions.general[3].answers;
+        answers5 = questions.general[4].answers;
+        answers6 = questions.general[5].answers;
+        answers7 = questions.general[6].answers;
+        answers8 = questions.general[7].answers;
+        answers9 = questions.general[8].answers;
+        answers10 = questions.general[9].answers;
+
+        constructedAs.push(answers1, answers2, answers3, answers4, answers5, answers6, answers7, answers8, answers9, answers10);
+        console.log(constructedAs);
+
+        correctAnswer1 = questions.general[0].correctAnswer;
+        correctAnswer2 = questions.general[1].correctAnswer;
+        correctAnswer3 = questions.general[2].correctAnswer;
+        correctAnswer4 = questions.general[3].correctAnswer;
+        correctAnswer5 = questions.general[4].correctAnswer;
+        correctAnswer6 = questions.general[5].correctAnswer;
+        correctAnswer7 = questions.general[6].correctAnswer;
+        correctAnswer8 = questions.general[7].correctAnswer;
+        correctAnswer9 = questions.general[8].correctAnswer;
+        correctAnswer10 = questions.general[9].correctAnswer;
+
+        correctArray.push(correctAnswer1, correctAnswer2, correctAnswer3, correctAnswer4, correctAnswer5, correctAnswer6, correctAnswer7, correctAnswer8, correctAnswer9, correctAnswer10);
+        console.log(correctArray);
+    }
+}
+
+
