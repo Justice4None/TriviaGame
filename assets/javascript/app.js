@@ -154,6 +154,55 @@ const questions = {
         },
         correctAnswer: "d"
     },
-    
+    {
+        question: "What company created the Metro game series?",
+        answers: {
+            a: "Capcom",
+            b: "4A Games",
+            c: "Ubisoft",
+            d: "Rockstar"
+        },
+        correctAnswer: "b"
+    },
+    {
+        question: "In what year was the ground-breaking Medal of Honor released?",
+        answers: {
+            a: "1995",
+            b: "1998",
+            c: "1999",
+            d: "2002"
+        },
+        correctAnswer: "c"
+    },
+    {
+        question: "What publisher was given exclusive development rights for Star Wars by Disney?",
+        answers: {
+            a: "EA",
+            b: "Activision",
+            c: "Sony",
+            d: "Ubisoft"
+        },
+        correctAnswer: "a"
+    },
+    {
+        question: "Development studio Crytek was responsible for what ground-breaking shooter?",
+        answers: {
+            a: "Far Cry",
+            b: "Star Wars: Battlefront",
+            c: "Battlefield: Bad Company 2",
+            d: "Crysis"
+        },
+        correctAnswer: "d"
+    },
+    {
+        question: "Which popular competitive shooter has taken the world by storm?",
+        answers: {
+            a: "Overwatch",
+            b: "Counter-Strike: Global Offensive",
+            c: "Tom Clancy's Rainbow Six: Siege",
+            d: "PlayerUnknown's Battlegrounds"
+        },
+        correctAnswer: "b"
+    }
 
     ]}
