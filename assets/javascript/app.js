@@ -205,4 +205,106 @@ const questions = {
         correctAnswer: "b"
     }
 
-    ]}
+    ],
+    general: [{
+        question: "Who is Mario's brother?",
+        answers: {
+            a: "Luigi",
+            b: "Wario",
+            c: "Waluigi",
+            d: "Toadstool"
+        },
+        correctAnswer: "a"
+    },
+    {
+        question: "Who is the antagonist throughout the Legend of Zelda franchise?",
+        answers: {
+            a: "Zelda",
+            b: "Link",
+            c: "Mipha",
+            d: "Ganondorf"
+        },
+        correctAnswer: "d"
+    },
+    {
+        question: "What is the most recent entry in the Legend of Zelda franchise?",
+        answers: {
+            a: "A Link to the Past",
+            b: "Windwaker",
+            c: "Breath of the Wild",
+            d: "Twilight Princess"
+        },
+        correctAnswer: "c"
+    },
+    {
+        question: "How many games are there in the Dark Souls franchise?",
+        answers: {
+            a: "2",
+            b: "3",
+            c: "6",
+            d: "8"
+        },
+        correctAnswer: "b"
+    },
+    {
+        question: "Who is the original creator of Mario?",
+        answers: {
+            a: "Shigeru Miyamoto",
+            b: "Hideo Kojima",
+            c: "Koji Kondo",
+            d: "Reggie Fils-Aimé"
+        },
+        correctAnswer: "a"
+    },
+    {
+        question: "When was the PlayStation released in America?",
+        answers: {
+            a: "1990",
+            b: "1992",
+            c: "1995",
+            d: "1999"
+        },
+        correctAnswer: "c"
+    },
+    {
+        question: "What is the highest-selling video game console?",
+        answers: {
+            a: "Nintendo Wii",
+            b: "Sony PlayStation 2",
+            c: "Nintendo DS",
+            d: "Microsoft Xbox 360"
+        },
+        correctAnswer: "b"
+    },
+    {
+        question: "What is the highest selling video game of all time?",
+        answers: {
+            a: "Pokémon Red/Green/Blue/Yellow",
+            b: "Grand Theft Auto V",
+            c: "Minecraft",
+            d: "Tetris"
+        },
+        correctAnswer: "c"
+    },
+    {
+        question: "When was the hugely popular World of Warcraft released?",
+        answers: {
+            a: "2004",
+            b: "2009",
+            c: "2011",
+            d: "2013"
+        },
+        correctAnswer: "a"
+    },
+    {
+        question: "When was the earliest known video game made?",
+        answers: {
+            a: "1945",
+            b: "1950",
+            c: "1967",
+            d: "1978"
+        },
+        correctAnswer: "b"
+    },
+       
+    ]},
