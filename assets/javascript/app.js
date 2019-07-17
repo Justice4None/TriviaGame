@@ -207,7 +207,7 @@ const questions = {
 
     ],
     general: [{
-        question: "Who is general's brother?",
+        question: "Who is Mario's brother?",
         answers: {
             a: "Luigi",
             b: "Wario",
@@ -247,7 +247,7 @@ const questions = {
         correctAnswer: "b"
     },
     {
-        question: "Who is the original creator of general?",
+        question: "Who is the original creator of Mario?",
         answers: {
             a: "Shigeru Miyamoto",
             b: "Hideo Kojima",
@@ -307,10 +307,10 @@ const questions = {
         correctAnswer: "b"
     },
        
-    ]},
+    ]}
+
 
 // Variables
-const welcomeDiv = $('#welcome');
 const gameDiv = $('#game');
 const quizThemeDiv = $('#quiz-theme');
 const startButton = $('#start');
@@ -362,6 +362,7 @@ updateTimer = () => {
 startGame = () => {
     // Click the start button to begin game
     $(startButton).on('click', function () {
+        console.log('hello')
         startButton.hide(500);
         window.setTimeout(function () {
             gameDiv.slideDown(100);
@@ -369,7 +370,8 @@ startGame = () => {
         window.setTimeout(function () {
             quizThemeDiv.slideDown(1500);
         }, 500)
-    });
+    })
+};
 
      // Choose a video game for the questions
     /*RPGs*/
@@ -431,37 +433,27 @@ build = (theme) => {
 
         // Build questions array
 
-        question1 = questions.rpgs[0].question;
-        question2 = questions.rpgs[1].question;
-        question3 = questions.rpgs[2].question;
-        question4 = questions.rpgs[3].question;
-        question5 = questions.rpgs[4].question;
-        question6 = questions.rpgs[5].question;
-        question7 = questions.rpgs[6].question;
-        question8 = questions.rpgs[7].question;
-        question9 = questions.rpgs[8].question;
-        question10 = questions.rpgs[9].question;
-
-        constructedQs.push(question1, question2, question3, question4, question5, question6, question7, question8, question9, question10);
-
-        console.log(constructedQs);
+        for (var i=0; i < 10; i++) {
+            constructedQs.push(questions.rpgs[i].question);
+            console.log(constructedQs);
+            constructedAs.push(questions.rpgs[i].answers);
+            console.log(constructedAs);
+            correctArray.push(questions.rpgs[i].correctAnswer);
+            console.log(correctArray);
+        }
 
         // Build answer choices array
-        answers1 = questions.rpgs[0].answers;
-        answers2 = questions.rpgs[1].answers;
-        answers3 = questions.rpgs[2].answers;
-        answers4 = questions.rpgs[3].answers;
-        answers5 = questions.rpgs[4].answers;
-        answers6 = questions.rpgs[5].answers;
-        answers7 = questions.rpgs[6].answers;
-        answers8 = questions.rpgs[7].answers;
-        answers9 = questions.rpgs[8].answers;
-        answers10 = questions.rpgs[9].answers;
 
-        constructedAs.push(answers1, answers2, answers3, answers4, answers5, answers6, answers7, answers8, answers9, answers10);
-        console.log(constructedAs);
-
+        // for (var i=0; i < 10; i++) {
+            // constructedAs.push(answers.rpgs[i].answer)
+            // console.log(constructedAs)
+       
+    
         // Build correct answer array
+        // for (var i=0; i < 10; i++) {
+            // correctArray.push(correctAnswer.rpgs[i].questions)
+            // console.log(correctArray)
+        
         correctAnswer1 = questions.rpgs[0].correctAnswer;
         correctAnswer2 = questions.rpgs[1].correctAnswer;
         correctAnswer3 = questions.rpgs[2].correctAnswer;
