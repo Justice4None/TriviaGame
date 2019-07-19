@@ -279,7 +279,7 @@ const questions = {
     {
         question: "What is the highest selling video game of all time?",
         answers: {
-            a: "Pokémon Red/Green/Blue/Yellow",
+            a: "Pokémon Red/Green/Blue/black",
             b: "Grand Theft Auto V",
             c: "Minecraft",
             d: "Tetris"
@@ -384,7 +384,7 @@ startGame = () => {
             timerDiv.show(1500);
         }, 1000);
         gameDiv.css({
-            backgroundColor: "goldenrod"
+            backgroundColor: "moccasin"
         });
         playGame();
     });
@@ -399,7 +399,7 @@ startGame = () => {
             timerDiv.show(1500);
         }, 1000);
         gameDiv.css({
-            backgroundColor: "goldenrod"
+            backgroundColor: "lightcoral"
         });
         playGame();
     });
@@ -414,7 +414,7 @@ startGame = () => {
             timerDiv.show(1500);
         }, 1000);
         gameDiv.css({
-            backgroundColor: "goldenrod"
+            backgroundColor: "aquamarine"
         });
         playGame();
     });
@@ -570,7 +570,7 @@ showQuestion = () => {
         case 1:
             $('#current-question').empty().html(question1);
             $('#choices').html(
-                '<ul><li class="btn btn-dark-green btn-lg animated tada" id="a">' + constructedAs[0].a + '</li><li class="btn btn-brown animated flash btn-lg" id="b">' + constructedAs[0].b + '</li><li class="btn btn-lg btn-cyan animated jello" id="c">' + constructedAs[0].c + '</li><li class="btn btn-yellow btn-lg animated wobble" id="c">' + constructedAs[0].d +
+                '<ul><li class="btn btn-black btn-lg animated tada" id="a">' + constructedAs[0].a + '</li><li class="btn btn-black animated flash btn-lg" id="b">' + constructedAs[0].b + '</li><li class="btn btn-lg btn-black animated jello" id="c">' + constructedAs[0].c + '</li><li class="btn btn-black btn-lg animated wobble" id="c">' + constructedAs[0].d +
                 '</li></ul>'
             );
             currentCorrectAnswer = correctArray[0];
@@ -580,7 +580,7 @@ showQuestion = () => {
         case 2:
             $('#current-question').empty().html(question2);
             $('#choices').html(
-                '<ul><li class="btn btn-dark-green btn-lg animated slideInDown" id="a">' + constructedAs[1].a + '</li><li class="btn btn-brown btn-lg animated slideInDown" id="b">' + constructedAs[1].b + '</li><li class="btn btn-cyan btn-lg animated slideInRight" id="c">' + constructedAs[1].c + '</li><li class="btn btn-yellow btn-lg animated slideInLeft" id="d">' + constructedAs[1].d +
+                '<ul><li class="btn btn-black btn-lg animated slideInDown" id="a">' + constructedAs[1].a + '</li><li class="btn btn-black btn-lg animated slideInDown" id="b">' + constructedAs[1].b + '</li><li class="btn btn-black btn-lg animated slideInRight" id="c">' + constructedAs[1].c + '</li><li class="btn btn-black btn-lg animated slideInLeft" id="d">' + constructedAs[1].d +
                 '</li></ul>'
             )
             currentCorrectAnswer = correctArray[1];
@@ -589,7 +589,7 @@ showQuestion = () => {
         case 3:
             $('#current-question').empty().html(question3);
             $('#choices').html(
-                '<ul><li class="btn btn-dark-green btn-lg animated rubberBand" id="a">' + constructedAs[2].a + '</li><li class="btn btn-brown btn-lg animated shake" id="b">' + constructedAs[2].b + '</li><li class="btn btn-cyan btn-lg animated headShake" id="c">' + constructedAs[2].c + '</li><li class="btn btn-yellow btn-lg animated bounceIn" id="d">' + constructedAs[2].d +
+                '<ul><li class="btn btn-black btn-lg animated rubberBand" id="a">' + constructedAs[2].a + '</li><li class="btn btn-black btn-lg animated shake" id="b">' + constructedAs[2].b + '</li><li class="btn btn-black btn-lg animated headShake" id="c">' + constructedAs[2].c + '</li><li class="btn btn-black btn-lg animated bounceIn" id="d">' + constructedAs[2].d +
                 '</li></ul>'
             );
             currentCorrectAnswer = correctArray[2];
@@ -598,7 +598,7 @@ showQuestion = () => {
         case 4:
             $('#current-question').empty().html(question4);
             $('#choices').html(
-                '<ul><li class="btn btn-dark-green btn-lg animated bounceInDown" id="a">' + constructedAs[3].a + '</li><li class="btn btn-brown btn-lg animated bounceInUp" id="b">' + constructedAs[3].b + '</li><li class="btn btn-cyan btn-lg animated bounceInRight" id="c">' + constructedAs[3].c + '</li><li class="btn btn-yellow btn-lg animated bounceInLeft" id="d">' + constructedAs[3].d +
+                '<ul><li class="btn btn-black btn-lg animated bounceInDown" id="a">' + constructedAs[3].a + '</li><li class="btn btn-black btn-lg animated bounceInUp" id="b">' + constructedAs[3].b + '</li><li class="btn btn-black btn-lg animated bounceInRight" id="c">' + constructedAs[3].c + '</li><li class="btn btn-black btn-lg animated bounceInLeft" id="d">' + constructedAs[3].d +
                 '</li></ul>'
             );
             currentCorrectAnswer = correctArray[3];
@@ -607,7 +607,7 @@ showQuestion = () => {
         case 5:
             $('#current-question').empty().html(question5);
             $('#choices').html(
-                '<ul><li class="btn btn-dark-green btn-lg animated fadeIn" id="a">' + constructedAs[4].a + '</li><li class="btn btn-brown btn-lg animated fadeInDownBig" id="b">' + constructedAs[4].b + '</li><li class="btn btn-cyan btn-lg animated fadeInUpBig" id="c">' + constructedAs[4].c + '</li><li class="btn btn-yellow btn-lg animated flipInX" id="d">' + constructedAs[4].d +
+                '<ul><li class="btn btn-black btn-lg animated fadeIn" id="a">' + constructedAs[4].a + '</li><li class="btn btn-black btn-lg animated fadeInDownBig" id="b">' + constructedAs[4].b + '</li><li class="btn btn-black btn-lg animated fadeInUpBig" id="c">' + constructedAs[4].c + '</li><li class="btn btn-black btn-lg animated flipInX" id="d">' + constructedAs[4].d +
                 '</li></ul>'
             );
             currentCorrectAnswer = correctArray[4];
@@ -616,7 +616,7 @@ showQuestion = () => {
         case 6:
             $('#current-question').empty().html(question6);
             $('#choices').html(
-                '<ul><li class="btn btn-dark-green btn-lg animated flipInY" id="a">' + constructedAs[5].a + '</li><li class="btn btn-brown btn-lg animated lightSpeedIn" id="b">' + constructedAs[5].b + '</li><li class="btn btn-cyan btn-lg animated fadeIn" id="c">' + constructedAs[5].c + '</li><li class="btn btn-yellow btn-lg animated rotateIn" id="d">' + constructedAs[5].d +
+                '<ul><li class="btn btn-black btn-lg animated flipInY" id="a">' + constructedAs[5].a + '</li><li class="btn btn-black btn-lg animated lightSpeedIn" id="b">' + constructedAs[5].b + '</li><li class="btn btn-black btn-lg animated fadeIn" id="c">' + constructedAs[5].c + '</li><li class="btn btn-black btn-lg animated rotateIn" id="d">' + constructedAs[5].d +
                 '</li></ul>'
             );
             currentCorrectAnswer = correctArray[5];
@@ -625,7 +625,7 @@ showQuestion = () => {
         case 7:
             $('#current-question').empty().html(question7);
             $('#choices').html(
-                '<ul><li class="btn btn-dark-green btn-lg animated rotateInDownLeft" id="a">' + constructedAs[6].a + '</li><li class="btn btn-brown btn-lg animated rotateInDownRight" id="b">' + constructedAs[6].b + '</li><li class="btn btn-cyan btn-lg animated rotateInUpLeft" id="c">' + constructedAs[6].c + '</li><li class="btn btn-lg btn-yellow animated rotateInUpRight" id="d">' + constructedAs[6].d +
+                '<ul><li class="btn btn-black btn-lg animated rotateInDownLeft" id="a">' + constructedAs[6].a + '</li><li class="btn btn-black btn-lg animated rotateInDownRight" id="b">' + constructedAs[6].b + '</li><li class="btn btn-black btn-lg animated rotateInUpLeft" id="c">' + constructedAs[6].c + '</li><li class="btn btn-lg btn-black animated rotateInUpRight" id="d">' + constructedAs[6].d +
                 '</li></ul>'
             );
             currentCorrectAnswer = correctArray[6];
@@ -634,7 +634,7 @@ showQuestion = () => {
         case 8:
             $('#current-question').empty().html(question8);
             $('#choices').html(
-                '<ul><li class="btn btn-lg btn-dark-green animated rollIn" id="a">' + constructedAs[7].a + '</li><li class="btn btn-brown btn-lg animated zoomIn" id="b">' + constructedAs[7].b + '</li><li class="btn btn-lg btn-cyan animated zoomInDown" id="c">' + constructedAs[7].c + '</li><li class="btn btn-yellow btn-lg animated zoomInRight" id="d">' + constructedAs[7].d +
+                '<ul><li class="btn btn-lg btn-black animated rollIn" id="a">' + constructedAs[7].a + '</li><li class="btn btn-black btn-lg animated zoomIn" id="b">' + constructedAs[7].b + '</li><li class="btn btn-lg btn-black animated zoomInDown" id="c">' + constructedAs[7].c + '</li><li class="btn btn-black btn-lg animated zoomInRight" id="d">' + constructedAs[7].d +
                 '</li></ul>'
             );
             currentQuestionNumber++;
@@ -642,7 +642,7 @@ showQuestion = () => {
         case 9:
             $('#current-question').empty().html(question9);
             $('#choices').html(
-                '<ul><li class="btn btn-dark-green btn-lg animated rollIn" id="a">' + constructedAs[8].a + '</li><li class="btn btn-brown btn-lg animated zoomInLeft" id="b">' + constructedAs[8].b + '</li><li class="btn btn-cyan btn-lg animated tada" id="c">' + constructedAs[8].c + '</li><li class="btn btn-lg btn-yellow animated flipInX" id="d">' + constructedAs[8].d +
+                '<ul><li class="btn btn-black btn-lg animated rollIn" id="a">' + constructedAs[8].a + '</li><li class="btn btn-black btn-lg animated zoomInLeft" id="b">' + constructedAs[8].b + '</li><li class="btn btn-black btn-lg animated tada" id="c">' + constructedAs[8].c + '</li><li class="btn btn-lg btn-black animated flipInX" id="d">' + constructedAs[8].d +
                 '</li></ul>'
             );
             currentCorrectAnswer = correctArray[8];
@@ -651,7 +651,7 @@ showQuestion = () => {
         case 10:
             $('#current-question').empty().html(question10);
             $('#choices').html(
-                '<ul><li><button class="btn btn-lg btn-dark-green animated rotateIn" id="a" type="button">' + constructedAs[9].a + '</button></li><li><button class="btn btn-brown btn-lg animated slideIn" id="b">' + constructedAs[9].b + '</button></li><li><button class="btn btn-cyan btn-lg animated jello" id="c">' + constructedAs[9].c + '</button></li><li> <button class="btn btn-yellow btn-lg animated wobble" id="d">' + constructedAs[9].d +
+                '<ul><li><button class="btn btn-lg btn-black animated rotateIn" id="a" type="button">' + constructedAs[9].a + '</button></li><li><button class="btn btn-black btn-lg animated slideIn" id="b">' + constructedAs[9].b + '</button></li><li><button class="btn btn-black btn-lg animated jello" id="c">' + constructedAs[9].c + '</button></li><li> <button class="btn btn-black btn-lg animated wobble" id="d">' + constructedAs[9].d +
                 '</button></li></ul>'
             );
             currentCorrectAnswer = correctArray[9];
